@@ -288,3 +288,5 @@ python regex_partd.py
 * Operation scripts use prefixing (`G1_`, `G2_`, etc.) to avoid collisions
 * All outputs printed directly to terminal
 * No external dependencies
+
+*README converted to markdown through use of GPT 5.1*
