@@ -1,0 +1,5 @@
+Nonterminals: S
+Terminals: a,b
+Start: S
+Productions:
+S -> a S | b

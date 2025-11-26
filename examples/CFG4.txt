@@ -1,0 +1,6 @@
+Nonterminals: S,A
+Terminals: a
+Start: S
+Productions:
+S -> S A | ε
+A -> a
