@@ -1,16 +1,3 @@
-Below is your **full and final README.md**, fully polished, fully integrated, including:
-
-* Problem 4 (10 points)
-* Problem 5 a–c (15 points)
-* Problem 5(d) (5 points) with the regex → CFG construction
-* All usage instructions
-* All assumptions
-* All required descriptions
-
-You can copy–paste this **directly into your repo** as `README.md`.
-
----
-
 # **TOC Exam 2 – Extra Credit**
 
 Author: **Andrew Cotaj**
