@@ -7,10 +7,13 @@ Professor: **Prof. Peter Kogge**
 This repository contains Python programs implementing all extra-credit tasks for **Exam 2**, including:
 
 1. **Problem 4 (10 points)**
-   Program to convert a context-free grammar (CFG) into **Chomsky Normal Form (CNF)**.
+  Program to convert a context-free grammar (CFG) into **Chomsky Normal Form (CNF)**.
 
 2. **Problem 5 (15 points for a–c, +5 points for part d)**
-   Programs that construct new CFGs using **union**, **concatenation**, **Kleene star**, and a final composite construction required for **part d**.
+  Programs that construct new CFGs using **union**, **concatenation**, **Kleene star**, and a final composite construction required for **part d**.
+
+3. **Problem 2 (10 points)**
+  Program to convert a context-free grammar (CFG) into an equivalent **pushdown automaton (PDA)** using the construction from Sipser’s Lemma 2.21.
 
 All programs read CFGs in a simple text format and **print results directly to the command line**. No external libraries are required.
 
