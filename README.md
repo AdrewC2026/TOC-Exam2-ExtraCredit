@@ -42,7 +42,7 @@ Writing a program that correctly converts a CFG (with no epsilon rules) into CNF
 
 * **Part 5(d)** (5 additional points) required:
   **Use your procedures to translate the regular expression
-  0 ∪ 10(000)^*
+  0 ∪ 10(000)*
   into a CFG.**
 
   This is implemented in the standalone script **`regex_partd.py`**.
