@@ -3,6 +3,7 @@
 Author: **Andrew Cotaj**
 Course: **CSE 30151 – Theory of Computing**
 Professor: **Prof. Peter Kogge**
+- Total Points Earned Back: **40 Points**
 
 This repository contains Python programs implementing all extra-credit tasks for **Exam 2**, including:
 
@@ -41,7 +42,7 @@ Writing a program that correctly converts a CFG (with no epsilon rules) into CNF
 
 * **Part 5(d)** (5 additional points) required:
   **Use your procedures to translate the regular expression
-  (0 ;\cup; 10(000)^*)
+  0 ∪ 10(000)^*
   into a CFG.**
 
   This is implemented in the standalone script **`regex_partd.py`**.
@@ -92,7 +93,7 @@ examples/CFG4.txt
 examples/CFG5.txt      # Test grammars of varying complexity
 ```
 
-All scripts run using standard Python 3.
+All scripts run using standard Python.
 
 ---
 
@@ -240,9 +241,7 @@ G2_G1_S10 -> 1 G2_G1_A10
 
 The resulting grammar correctly generates:
 
-[
-L = {0} ;\cup; {10(000)^k \mid k \ge 0}
-]
+L = {0} ∪ {10(000)^k ∣ k ≥ 0}
 
 ---
 
@@ -291,10 +290,8 @@ S_star -> ε | S_star G_S
 
 ### **Part D Construction**
 
-[
-(L(G_1) \cup L(G_2))^*
-\text{(but here applied only to }0 \cup 10(000)^*)
-]
+(L(G₁) ∪ L(G₂))*  
+(but here applied only to 0 ∪ 10(000)^*)
 
 ---
 
