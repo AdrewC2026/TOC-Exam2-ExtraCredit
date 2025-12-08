@@ -45,6 +45,25 @@ Writing a program that correctly converts a CFG (with no epsilon rules) into CNF
 
 ---
 
+### **Problem 2 — PDA from CFG (Part C, +10 points)**
+
+For Problem 2 Part C, I implemented a complete Python program (`cfg_to_pda.py`) that converts any given context-free grammar into a pushdown automaton using the standard construction from Sipser’s Lemma 2.21. This corrected submission earns back the full **10 points** originally lost on this question.
+
+Highlights:
+* Uses a single state and accepts by empty stack (equivalent to final-state acceptance).
+* Initializes with `(q, ε, $ → q, S)`.
+* Replaces nonterminals via ε-transitions.
+* Matches terminals with `(q, a, a → q, ε)`.
+* For every production `A → X1 X2 … Xn`, pushes `Xn … X2 X1` (reverse order) so `X1` is on top, respecting the LIFO stack for left-to-right matching.
+* Reads CFGs in the project’s standard format and prints a clean transition table.
+
+Run with:
+```
+python cfg_to_pda.py <grammarfile.txt>
+```
+
+---
+
 # **1. File Overview**
 
 ```
@@ -60,6 +79,8 @@ cfg_operations.py      # Implementations of union, concatenation, star
 regex_partd.py         # Problem 5(d): Construct CFG for regex 0 ∪ 10(000)*
 
 cfg_utils.py           # CFG class, parser, pretty-printer
+
+cfg_to_pda.py          # Problem 2 Part C: CFG -> PDA (Sipser Lemma 2.21)
 
 examples/CFG1.txt
 examples/CFG2.txt
@@ -114,6 +135,7 @@ From the project directory:
 python convert_to_cnf.py <input_cfg>
 python run_operations.py <operation> <args>
 python regex_partd.py
+python cfg_to_pda.py <grammarfile.txt>
 ```
 
 ---
@@ -221,6 +243,23 @@ L = {0} ;\cup; {10(000)^k \mid k \ge 0}
 
 ---
 
+# **3.4 Problem 2 — CFG to PDA (Part C, +10 points)**
+
+This program converts any CFG (in the project’s input format) to an equivalent PDA:
+* Construction: Sipser Lemma 2.21, single state, accept by empty stack.
+* Stack initialization: `(q, ε, $ → q, S)`.
+* Nonterminal replacement: ε-transitions pushing RHS in reverse order.
+* Terminal matching: `(q, a, a → q, ε)`.
+
+Example:
+```
+python cfg_to_pda.py examples/CFG1.txt
+```
+
+It prints the complete transition table to the console.
+
+---
+
 # **4. Description of Each Operation**
 
 ### **Union(G1, G2)**
@@ -276,6 +315,7 @@ python run_operations.py union CFG1.txt CFG2.txt
 python run_operations.py concat CFG3.txt CFG1.txt
 python run_operations.py star CFG1.txt
 python regex_partd.py
+python cfg_to_pda.py examples/CFG1.txt
 ```
 
 ---
